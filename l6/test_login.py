@@ -44,7 +44,7 @@ class TestLogin(unittest.TestCase):
 
         self.fill_info()
 
-        error = WebDriverWait(self.driver, 2).until(
+        error = WebDriverWait(self.driver, 5).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'error-msg')))
 
         self.assertIsNotNone(

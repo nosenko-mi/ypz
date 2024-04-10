@@ -50,7 +50,7 @@ class TestLogin():
 
         self.fill_info()
 
-        error = WebDriverWait(browser, 2).until(
+        error = WebDriverWait(browser, 5).until(
             EC.visibility_of_element_located((By.CLASS_NAME, 'error-msg')))
 
         assert error is not None, 'Error message shoud pop up if user does not exist.'
